@@ -1,13 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  margin-top: 25px;
-  background-color: rgb(53, 53, 63);
-  color: rgb(14, 181, 231);
-}
-
-.header {
-  text-align: center;
-}
-
-.table {
-  margin-top: 50px;
+  background-color: #1d1e22;
+  color: #d4d4dc;
 }

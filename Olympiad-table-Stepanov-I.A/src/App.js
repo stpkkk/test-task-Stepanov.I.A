@@ -23,9 +23,9 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className="container mt-5">
       <header className="header">
-        <h1>Олимпиада</h1>
+        <h1 className="text-center">Олимпиада</h1>
       </header>
       <PlayersForm addParticipant={addParticipant} />
       {participants.length > 0 && <Table participants={participants} />}

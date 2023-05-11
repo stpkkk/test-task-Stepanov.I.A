@@ -47,7 +47,7 @@ export const PlayersForm = ({ addParticipant }) => {
       <button
         onClick={handleClick}
         type="button"
-        className="btn btn-primary"
+        className="btn btn-success"
         data-toggle="modal"
         data-target="#exampleModal"
       >

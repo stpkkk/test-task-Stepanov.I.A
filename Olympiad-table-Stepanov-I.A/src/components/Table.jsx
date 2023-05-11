@@ -54,7 +54,7 @@ const Table = ({ participants }) => {
       buttons.push(
         <li className={`page-item${currentPage === i ? "active " : ""}`}>
           <button
-            className="page-link"
+            className="page-link rounded-0"
             key={i}
             onClick={() => handlePageChange(i)}
           >
@@ -68,9 +68,12 @@ const Table = ({ participants }) => {
 
   return (
     <>
-      <table className="table" id="sortTable">
+      <table
+        className="table Success table-bordered table-hover mt-5"
+        id="sortTable"
+      >
         <thead>
-          <tr>
+          <tr className="bg-secondary">
             <th
               scope="col"
               onClick={() => {
