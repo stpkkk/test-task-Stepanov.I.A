@@ -3,13 +3,13 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      montserrat: 'Montserrat',
+      Montserrat: ['Montserrat', 'sans-serif'],
     },
-    container: {
-      padding: {
-        DEFAULT: '15px',
-      },
-    },
+    // container: {
+    //   padding: {
+    //     DEFAULT: '60px',
+    //   },
+    // },
     screens: {
       sm: { max: '640px' },
     },
@@ -18,12 +18,12 @@ module.exports = {
         background: '#E5E5E',
         gray: '#35312D',
         potato: '#ECBA46',
-        headerSecond: '#343434',
+        lightGray: '#343434',
+        darkGray: '#201E1C',
+        buttonGray: '#404040',
       },
       backgroundImage: {
-        site: "url('./assets/site-bg.jpg')",
-        about: "url('./assets/about.png')",
-        services: "url('./assets/services.png')",
+        bannerPotatoes: "url('./assets/images/banner.jpg')",
       },
     },
   },

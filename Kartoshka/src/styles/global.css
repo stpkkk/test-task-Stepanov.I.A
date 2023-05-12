@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/fonts/Montserrat.ttf');
+}
+
+.active {
+  color: #fff;
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+.gradient {
+  background: radial-gradient(
+    61.83% 61.83% at 50% 50%,
+    rgba(225, 186, 110, 0) 0%,
+    rgba(225, 186, 110, 0.7) 100%
+  );
+}
+
+@layer base {
+  body {
+    @apply font-Montserrat text-lightGray;
+  }
+
+  /* FLex */
+  .flex_center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex_start {
+    @apply flex justify-start items-start;
+  }
+
+  .flex_end {
+    @apply flex justify-end items-center;
+  }
+
+  .flex_between {
+    @apply flex justify-between items-center flex-wrap;
+  }
+}
