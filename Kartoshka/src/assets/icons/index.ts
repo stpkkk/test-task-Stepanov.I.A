@@ -1,4 +1,5 @@
 export { Logo } from './Logo';
+import { VideoPlay } from './VideoPlay';
 export { Close } from './Close';
 export { Burger } from './Burger';
 export { VK } from './VK';
@@ -7,3 +8,4 @@ export { Twitter } from './Twitter';
 export { Insta } from './Insta';
 export { ArrowRight } from './ArrowRight';
 export { ArrowLeft } from './ArrowLeft';
+export { VideoPlay } from './VideoPlay';
