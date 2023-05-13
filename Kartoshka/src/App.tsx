@@ -7,8 +7,10 @@ export const App: React.FC = () => {
     <div>
       <Nav />
       <Banner />
-      <Slider />
-      <Video />
+      <div className="px-[60px] sm:px-0">
+        <Slider />
+        <Video />
+      </div>
     </div>
   );
 };
