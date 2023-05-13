@@ -13,9 +13,12 @@ module.exports = {
     screens: {
       sm: { max: '640px' },
     },
+    variants: {
+      fill: ['hover', 'focus'],
+    },
     extend: {
       colors: {
-        background: '#E5E5E',
+        background: '#E5E5E5',
         gray: '#35312D',
         potato: '#ECBA46',
         lightGray: '#343434',

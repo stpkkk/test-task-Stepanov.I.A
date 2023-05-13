@@ -1,14 +1,13 @@
 import React from 'react';
-import { Banner, Nav, Slider } from './components';
+import { Banner, Nav, Slider, SocialLinks } from './components';
 
 export const App: React.FC = () => {
   return (
-    <>
+    <div>
       <Nav />
-      <div>
-        <Banner />
-        <Slider />
-      </div>
-    </>
+      <Banner />
+      <Slider />
+      <SocialLinks />
+    </div>
   );
 };

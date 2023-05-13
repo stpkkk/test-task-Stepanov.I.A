@@ -26,6 +26,10 @@
     @apply font-Montserrat text-lightGray;
   }
 
+  /* .container {
+    @apply sm:min-h-screen sm:flex sm:flex-col sm:overflow-hidden;
+  } */
+
   /* FLex */
   .flex_center {
     @apply flex justify-center items-center;
