@@ -24,6 +24,7 @@ module.exports = {
         lightGray: '#343434',
         darkGray: '#201E1C',
         buttonGray: '#404040',
+        lightYellow: '#FFD573',
       },
       backgroundImage: {
         bannerPotatoes: "url('./assets/images/banner.jpg')",

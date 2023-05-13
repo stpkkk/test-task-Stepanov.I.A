@@ -54,7 +54,11 @@
   }
 
   .subtitle {
-    @apply font-extrabold text-[60px] sm:text-[40px] leading-[73px] sm:leading-[49px] text-lightGray border-b-[10px] sm:border-b-[6px] pb-[15px] sm:pb-[11px]  border-potato inline-block;
+    @apply font-extrabold text-[60px] sm:text-[40px] leading-[73px] sm:leading-[49px] text-lightGray border-b-[10px] sm:border-b-[6px] pb-[15px] sm:pb-[11px] z-40  border-potato inline-block;
+  }
+
+  .input {
+    @apply h-[60px] border border-[#746B61] bg-transparent rounded-[5px] text-white p-[20px] leading-[20px];
   }
 
   /* FLex */

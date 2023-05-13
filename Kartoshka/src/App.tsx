@@ -1,6 +1,5 @@
 import React from 'react';
-import { Banner, Nav, Slider } from './components';
-import { Video } from './components/Video';
+import { AboutUs, Banner, Nav, Slider, Footer, Video } from './components';
 
 export const App: React.FC = () => {
   return (
@@ -10,6 +9,8 @@ export const App: React.FC = () => {
       <div className="px-[60px] sm:px-0">
         <Slider />
         <Video />
+        <AboutUs />
+        <Footer />
       </div>
     </div>
   );

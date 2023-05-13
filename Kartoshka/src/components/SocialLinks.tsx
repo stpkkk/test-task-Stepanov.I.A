@@ -15,9 +15,9 @@ export const SocialLinks: React.FC = () => {
         <a
           key={link.path}
           href={link.path}
-          className={`bg-background w-[40px] h-[40px] flex_center rounded-full hover:bg-[${link.hoverColor}] hover:fill-white`}
+          className={`bg-background w-[40px] h-[40px] flex_center rounded-full hover:text-${link.hoverColor}`}
         >
-          <li>{link.image}</li>
+          <li className="fill-current text-red-600">{link.image}</li>
         </a>
       ))}
     </ul>
