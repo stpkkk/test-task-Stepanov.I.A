@@ -5,3 +5,5 @@ export { VK } from './VK';
 export { Facebook } from './Facebook';
 export { Twitter } from './Twitter';
 export { Insta } from './Insta';
+export { ArrowRight } from './ArrowRight';
+export { ArrowLeft } from './ArrowLeft';

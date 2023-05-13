@@ -1,5 +1,4 @@
 export { Banner } from './Banner';
 export { Nav } from './Nav';
-export { Header } from './Header';
-export { Slider } from './Slider';
+export * from './prices';
 export { SocialLinks } from './SocialLinks';

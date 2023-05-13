@@ -23,7 +23,7 @@ export const NavDesktop: React.FC = () => {
       <ul className="flex justify-around items-center gap-x-[59px] font-medium text-[20px] leading-[24px]">
         {navLinks.map((link) => (
           <li key={link.navLink} className={link.className}>
-            <Link to={link.navLink} as="link.navLink">
+            <Link to={link.navLink} as="link.navLink" spy smooth>
               {link.navTitle}
             </Link>
           </li>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Banner, Nav, Slider, SocialLinks } from './components';
+import { Banner, Nav, Slider } from './components';
+import { Video } from './components/Video';
 
 export const App: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ export const App: React.FC = () => {
       <Nav />
       <Banner />
       <Slider />
-      <SocialLinks />
+      <Video />
     </div>
   );
 };

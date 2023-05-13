@@ -1,1 +1,1 @@
-export { navLinks } from './nav-links';
+export { getSliderData } from './slider-data';
