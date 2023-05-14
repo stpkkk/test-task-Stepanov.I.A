@@ -1,2 +1,2 @@
-export { Slider } from './Slider';
 export { ImagePaths } from './ImagePaths';
+export { Slider } from './Slider';

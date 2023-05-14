@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
+
 import { Burger, Close, Logo } from '../assets/icons';
 import { useMobile } from '../hooks';
 import { SocialLinks } from './SocialLinks';
@@ -31,22 +32,20 @@ const navLinks = [
   },
 ];
 
-export const NavDesktop: React.FC = () => {
-  return (
-    <nav className="absolute z-10 left-0 right-0 flex justify-between p-[36px] text-white max-w-[1200px] w-full mx-auto">
-      <Logo />
-      <ul className="flex justify-around items-center gap-x-[59px] font-medium text-[20px] leading-[24px]">
-        {navLinks.map((link) => (
-          <li key={link.navLink} className={link.className}>
-            <Link to={link.navLink} as="link.navLink" spy smooth>
-              {link.navTitle}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-};
+export const NavDesktop: React.FC = () => (
+  <nav className="absolute z-10 left-0 right-0 flex justify-between p-[36px] text-white max-w-[1200px] w-full mx-auto">
+    <Logo />
+    <ul className="flex justify-around items-center gap-x-[59px] font-medium text-[20px] leading-[24px]">
+      {navLinks.map((link) => (
+        <li key={link.navLink} className={link.className}>
+          <Link to={link.navLink} as="link.navLink" spy smooth>
+            {link.navTitle}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </nav>
+);
 
 export const NavMobile: React.FC = () => {
   const [isMobileMenu, setIsMobileMenuOpen] = useState(false);
@@ -71,8 +70,8 @@ export const NavMobile: React.FC = () => {
       <div className="flex_start flex-col gap-y-[119px]">
         <ul className="flex_start flex-col gap-y-[43px]">
           {navLinks.map((link) => (
-            <li key={link.navLink} onClick={handleLinkClick}>
-              <Link to={link.navLink} as="link.navLink">
+            <li key={link.navLink}>
+              <Link onClick={handleLinkClick} to={link.navLink} as="link.navLink">
                 {link.navTitle}
               </Link>
             </li>

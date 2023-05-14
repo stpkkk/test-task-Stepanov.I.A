@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export const Facebook: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);

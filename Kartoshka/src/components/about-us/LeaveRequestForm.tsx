@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactInputMask from 'react-input-mask';
+import InputMask from 'react-input-mask';
 
 export const LeaveRequestForm: React.FC = () => {
   const [name, setName] = useState('');
@@ -21,27 +21,29 @@ export const LeaveRequestForm: React.FC = () => {
     return isValid;
   };
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
     const isFormValid = validateName(name) && validatePhone(phone);
     setTouched(true);
     if (isFormValid) {
-      alert(`Спасибо за заявку ${name}! Скоро с вами свяжутся!`);
+      // eslint-disable-next-line no-alert
+      alert(`Спасибо за заявку ${name}! Мы скоро с вами свяжемся!`);
+      setName('');
+      setPhone('');
     }
   };
   return (
     <form
       className="flex items-center flex-col max-w-[970px] w-full rounded-[20px] min-h-[494px] bg-gray pt-[59px] z-20 sm:min-h-[400px] sm:rounded-none sm:pt-[40px] sm:px-[35px]"
       id="contact-us"
+      onSubmit={handleSubmit}
     >
       <h3 className="text-center text-[40px] leading-[49px] font-semibold text-white mb-[46px] sm:text-[30px] sm:leading-[37px] sm:mb-[36px]">
         Оставить заявку
       </h3>
       <div className="w-full max-w-[370px] flex flex-col gap-y-[20px] mb-[65px] sm:mb-[35px]">
         <input
-          className={[
-            isNameValid || !isTouched ? 'input' : 'input border-[tomato]',
-          ].join(' ')}
+          className={`input ${isTouched && !isNameValid ? 'border-[tomato]' : ''}`}
           type="text"
           placeholder="Имя"
           value={name}
@@ -51,7 +53,7 @@ export const LeaveRequestForm: React.FC = () => {
             setNameValid(validateName(value));
           }}
         />
-        <ReactInputMask
+        <InputMask
           mask="+7(999)99-999-99"
           value={phone}
           onChange={(e) => {
@@ -59,16 +61,12 @@ export const LeaveRequestForm: React.FC = () => {
             setPhone(value);
             setPhoneValid(validatePhone(value));
           }}
-          className={[
-            isPhoneValid || !isTouched ? 'input' : 'input border-[tomato]',
-          ].join(' ')}
+          className={`input ${isTouched && !isPhoneValid ? 'border-[tomato]' : ''}`}
           type="tel"
           placeholder="Номер телефона"
-          required
         />
       </div>
       <button
-        onClick={handleClick}
         type="submit"
         className="bg-potato text-[#333333] text-[20px] leading-[24px] rounded-[130px] py-[13px] max-w-[240px] w-full font-medium hover:bg-lightYellow"
       >

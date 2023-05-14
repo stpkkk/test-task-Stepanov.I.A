@@ -1,13 +1,15 @@
 import React, { useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation } from 'swiper';
-import { ImagePaths } from './ImagePaths';
-import { getSliderData } from '../../data';
 import 'swiper/swiper.min.css';
-import { ArrowRight, ArrowLeft } from '../../assets/icons';
-import { useMobile } from '../../hooks';
-import { Pagination } from 'swiper';
+// eslint-disable-next-line import/no-unresolved
 import 'swiper/css/pagination';
+
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { ArrowLeft, ArrowRight } from '../../assets/icons';
+import { getSliderData } from '../../data';
+import { useMobile } from '../../hooks';
+import { ImagePaths } from './ImagePaths';
 
 SwiperCore.use([Navigation]);
 
@@ -60,6 +62,7 @@ export const Slider: React.FC = () => {
         {isMobile || (
           <div className="absolute top-1/2 left-4 z-10">
             <button
+              type="button"
               className="swiper-button-prev"
               onClick={() => swiperRef.current?.slidePrev()}
             >
@@ -70,6 +73,7 @@ export const Slider: React.FC = () => {
         {isMobile || (
           <div className="absolute top-1/2 right-4 z-10">
             <button
+              type="button"
               className="swiper-button-next"
               onClick={() => swiperRef.current?.slideNext()}
             >

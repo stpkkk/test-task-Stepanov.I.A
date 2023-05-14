@@ -1,9 +1,9 @@
 import React from 'react';
+import { useMobile } from '../../hooks';
 import chiefGirl from '../../assets/images/chief-girl.png';
 import firstPotato from '../../assets/images/potato-first.png';
 import mutedPotato from '../../assets/images/potato-muted.png';
 import { LeaveRequestForm } from './LeaveRequestForm';
-import { useMobile } from '../../hooks';
 
 export const AboutUs: React.FC = () => {
   const isMobile = useMobile();
@@ -23,16 +23,15 @@ export const AboutUs: React.FC = () => {
         />
         <div className="text-[18px] leading-[29px] sm:text-[12px] sm:leading-[19px] px-[42px] sm:px-[71px]  sm:text-center sm:font-semibold font-normal z-20 ">
           <p>
-            Если картошка, запеченная в духовке, получается не всегда такой как
-            хочется (сухая или наоборот мокрая, сыроватая внутри, недостаточно
-            удачная по специям) — дайте шанс этому рецепту.
+            Если картошка, запеченная в духовке, получается не всегда такой как хочется
+            (сухая или наоборот мокрая, сыроватая внутри, недостаточно удачная по специям)
+            — дайте шанс этому рецепту.
           </p>
           <br />
           <p className="sm:pb-[43px]">
-            Такая картошечка по-деревенски стабильно получается очень вкусная,
-            хрустящая снаружи и мягкая, как пюрешка внутри, ароматная — в общем
-            пальчики оближешь. Рецепт у меня простой, но с технологическим
-            секретом, который и решает дело.
+            Такая картошечка по-деревенски стабильно получается очень вкусная, хрустящая
+            снаружи и мягкая, как пюрешка внутри, ароматная — в общем пальчики оближешь.
+            Рецепт у меня простой, но с технологическим секретом, который и решает дело.
           </p>
         </div>
       </div>
@@ -45,11 +44,7 @@ export const AboutUs: React.FC = () => {
         />
       )}
       {isMobile || (
-        <img
-          className="absolute top-[5em] left-[5em]"
-          src={mutedPotato}
-          alt="potato"
-        />
+        <img className="absolute top-[5em] left-[5em]" src={mutedPotato} alt="potato" />
       )}
     </section>
   );

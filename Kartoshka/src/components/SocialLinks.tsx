@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Facebook, Insta, Twitter, VK } from '../assets/icons';
 
 const links = [
@@ -14,14 +15,12 @@ const links = [
   { path: 'https://instagram.com', image: <Insta /> },
 ];
 
-export const SocialLinks: React.FC = () => {
-  return (
-    <ul className="flex_center space-x-4">
-      {links.map((link) => (
-        <a key={link.path} href={link.path}>
-          <li>{link.image}</li>
-        </a>
-      ))}
-    </ul>
-  );
-};
+export const SocialLinks: React.FC = () => (
+  <ul className="flex_center space-x-4">
+    {links.map((link) => (
+      <a key={link.path} href={link.path}>
+        <li>{link.image}</li>
+      </a>
+    ))}
+  </ul>
+);
