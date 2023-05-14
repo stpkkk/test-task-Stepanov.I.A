@@ -8,7 +8,10 @@ import { useMobile } from '../../hooks';
 export const AboutUs: React.FC = () => {
   const isMobile = useMobile();
   return (
-    <section className="relative flex_center flex-col pt-[89px] sm:pt-[50px]">
+    <section
+      className="relative flex_center flex-col pt-[89px] sm:pt-[50px]"
+      id="about-us"
+    >
       <h2 className="subtitle mb-[59px] sm:mb-[39px]">О нас</h2>
       <div className="flex max-w-[752px] gap-x-[20px] sm:flex-col sm:flex_center">
         <img
@@ -34,14 +37,14 @@ export const AboutUs: React.FC = () => {
       <LeaveRequestForm />
       {isMobile || (
         <img
-          className="absolute right-[19em] bottom-[12em]"
+          className="absolute right-[4em] bottom-[12em] "
           src={firstPotato}
           alt="potato"
         />
       )}
       {isMobile || (
         <img
-          className="absolute  top-[5em] left-[20em]"
+          className="absolute top-[5em] left-[5em]"
           src={mutedPotato}
           alt="potato"
         />

@@ -3,7 +3,7 @@ import { AboutUs, Banner, Nav, Slider, Footer, Video } from './components';
 
 export const App: React.FC = () => {
   return (
-    <div>
+    <>
       <Nav />
       <Banner />
       <div className="px-[60px] sm:px-0">
@@ -12,6 +12,6 @@ export const App: React.FC = () => {
         <AboutUs />
         <Footer />
       </div>
-    </div>
+    </>
   );
 };

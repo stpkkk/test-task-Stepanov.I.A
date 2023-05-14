@@ -5,9 +5,24 @@ import { useMobile } from '../hooks';
 import { SocialLinks } from './SocialLinks';
 
 const navLinks = [
-  { navLink: 'prices', navTitle: 'Цены' },
-  { navLink: 'video', navTitle: 'Видео' },
-  { navLink: 'about-us', navTitle: 'О нас' },
+  {
+    navLink: 'prices',
+    navTitle: 'Цены',
+    className:
+      "relative before:content-[''] before:absolute before:block before:w-full before:h-[4px]  before:-bottom-[6px] before:left-0 before:bg-potato before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300",
+  },
+  {
+    navLink: 'video',
+    navTitle: 'Видео',
+    className:
+      "relative before:content-[''] before:absolute before:block before:w-full before:h-[4px] before:-bottom-[6px] before:left-0 before:bg-potato before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300",
+  },
+  {
+    navLink: 'about-us',
+    navTitle: 'О нас',
+    className:
+      "relative before:content-[''] before:absolute before:block before:w-full before:h-[4px] before:-bottom-[6px] before:left-0 before:bg-potato before:hover:scale-x-100 before:scale-x-0 before:origin-top-left before:transition before:ease-in-out before:duration-300",
+  },
   {
     navLink: 'contact-us',
     navTitle: 'Оставить заявку',
@@ -45,7 +60,7 @@ export const NavMobile: React.FC = () => {
   };
 
   return isMobileMenu ? (
-    <nav className="fixed min-h-screen w-screen h-full pl-[60px] pt-[50px] pr-[38px] pb-[87px] bg-white text-lightGray font-medium text-[30px] leading-[37px] ">
+    <nav className="fixed z-40 min-h-screen w-screen pl-[60px] pt-[50px] pr-[38px] pb-[87px] bg-white text-lightGray font-medium text-[30px] leading-[37px] ">
       <button
         className="flex ml-auto focus:outline-none mb-[32px]"
         onClick={handleToggleMobileMenu}

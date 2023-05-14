@@ -30,7 +30,10 @@ export const LeaveRequestForm: React.FC = () => {
     }
   };
   return (
-    <form className="flex items-center flex-col max-w-[970px] w-full rounded-[20px] min-h-[494px] bg-gray pt-[59px] z-20 sm:min-h-[400px] sm:rounded-none sm:pt-[40px] sm:px-[35px]">
+    <form
+      className="flex items-center flex-col max-w-[970px] w-full rounded-[20px] min-h-[494px] bg-gray pt-[59px] z-20 sm:min-h-[400px] sm:rounded-none sm:pt-[40px] sm:px-[35px]"
+      id="contact-us"
+    >
       <h3 className="text-center text-[40px] leading-[49px] font-semibold text-white mb-[46px] sm:text-[30px] sm:leading-[37px] sm:mb-[36px]">
         Оставить заявку
       </h3>

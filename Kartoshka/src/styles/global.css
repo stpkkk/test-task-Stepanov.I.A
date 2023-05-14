@@ -54,7 +54,7 @@
   }
 
   .subtitle {
-    @apply font-extrabold text-[60px] sm:text-[40px] leading-[73px] sm:leading-[49px] text-lightGray border-b-[10px] sm:border-b-[6px] pb-[15px] sm:pb-[11px] z-40  border-potato inline-block;
+    @apply font-extrabold text-[60px] sm:text-[40px] leading-[73px] sm:leading-[49px] text-lightGray border-b-[10px] sm:border-b-[6px] pb-[15px] sm:pb-[11px] z-30  border-potato inline-block;
   }
 
   .input {
