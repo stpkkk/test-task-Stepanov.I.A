@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
 export const useMobile = () => {
-  const query = '(max-width: 640px)';
+  const query = '(max-width: 900px)';
 
   const getMatches = () => window.matchMedia(query).matches;
 

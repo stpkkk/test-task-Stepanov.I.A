@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import chiefGirl from '../../assets/images/chief-girl.png';
 import firstPotato from '../../assets/images/potato-first.png';
 import mutedPotato from '../../assets/images/potato-muted.png';
@@ -17,16 +17,18 @@ export const AboutUs: React.FC = () => {
         <img
           src={chiefGirl}
           alt="chief-girl"
-          className="sm:absolute sm:right-[11em] sm:top-[3em] sm:opacity-[0.4]"
+          width={290}
+          height={450}
+          className="sm:absolute sm:right-[11em] sm:top-[3em] sm:opacity-[0.4] sm:left-0 z-20  extraSm:!top-[11em] extraSm:!left-[0]"
         />
-        <div className="text-[18px] leading-[29px] sm:text-[12px] sm:leading-[19px] px-[42px] sm:px-[71px] sm:pb-[43px] sm:text-center sm:font-semibold font-normal sm:z-20">
+        <div className="text-[18px] leading-[29px] sm:text-[12px] sm:leading-[19px] px-[42px] sm:px-[71px]  sm:text-center sm:font-semibold font-normal z-20 ">
           <p>
             Если картошка, запеченная в духовке, получается не всегда такой как
             хочется (сухая или наоборот мокрая, сыроватая внутри, недостаточно
             удачная по специям) — дайте шанс этому рецепту.
           </p>
           <br />
-          <p>
+          <p className="sm:pb-[43px]">
             Такая картошечка по-деревенски стабильно получается очень вкусная,
             хрустящая снаружи и мягкая, как пюрешка внутри, ароматная — в общем
             пальчики оближешь. Рецепт у меня простой, но с технологическим
@@ -37,7 +39,7 @@ export const AboutUs: React.FC = () => {
       <LeaveRequestForm />
       {isMobile || (
         <img
-          className="absolute right-[4em] bottom-[12em] "
+          className="absolute right-[4em] bottom-[12em]"
           src={firstPotato}
           alt="potato"
         />

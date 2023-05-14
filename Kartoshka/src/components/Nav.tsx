@@ -33,7 +33,7 @@ const navLinks = [
 
 export const NavDesktop: React.FC = () => {
   return (
-    <nav className="absolute z-10 left-0 right-0 flex justify-between py-[36px] text-white max-w-[1200px] w-full mx-auto">
+    <nav className="absolute z-10 left-0 right-0 flex justify-between p-[36px] text-white max-w-[1200px] w-full mx-auto">
       <Logo />
       <ul className="flex justify-around items-center gap-x-[59px] font-medium text-[20px] leading-[24px]">
         {navLinks.map((link) => (

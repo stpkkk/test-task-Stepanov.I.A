@@ -17,7 +17,7 @@ export const Slider: React.FC = () => {
 
   return (
     <section
-      className="w-full min-h-[851px] sm:min-h-[551px]  sm:px-[47px] pt-[105px] sm:pt-[50px] "
+      className="w-full min-h-[851px] sm:min-h-[551px]   pt-[105px] sm:pt-[50px] "
       id="prices"
     >
       <div className="relative max-w-[760px] w-full mx-auto">

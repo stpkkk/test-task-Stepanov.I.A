@@ -11,7 +11,8 @@ module.exports = {
     //   },
     // },
     screens: {
-      sm: { max: '640px' },
+      extraSm: { max: '380px' },
+      sm: { max: '900px' },
     },
     variants: {
       fill: ['hover', 'focus'],
