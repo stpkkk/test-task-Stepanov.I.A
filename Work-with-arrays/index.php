@@ -78,44 +78,52 @@ $workers = array (
 	),
 );
 
-function findNearestWorker($district) {
+/**
+* @param string $areaName Название района
+* @param array $nearby Близкие районы
+* @param array $areas Список районов
+* @param array $workers Список сотрудников
+* @param array $checkedAreas Список проверенных районов
+* @return string|null Логин сотрудника или null, если не найден
+*/
+
+function findNearestWorker($area_name) {
 	global $areas, $nearby, $workers;
-	$area_key = array_search($district, $areas);
-	if ($area_key !== false) {
-			foreach ($workers as $worker) {
-					if ($worker['area_name'] == $district) {
-							return $worker['login'];
-					}
+
+	$nearest_workers = array();
+	$area_id = array_search($area_name, $areas);
+
+	// Ищем ближайшего сотрудника в прямом списке районов
+	foreach ($workers as $worker) {
+			if ($worker['area_name'] === $area_name) {
+					$nearest_workers[] = $worker['login'];
 			}
-	} else {
-			foreach ($nearby as $nearby_key => $nearby_areas) {
-					if (in_array($area_key, $nearby_areas)) {
-							foreach ($workers as $worker) {
-									if ($worker['area_name'] == $areas[$nearby_key]) {
-											return $worker['login'];
-									}
+	}
+
+	// Если ближайший сотрудник не найден, ищем среди соседних районов
+	if (empty($nearest_workers)) {
+			foreach ($nearby[$area_id] as $nearby_area_id) {
+					$nearby_area_name = $areas[$nearby_area_id];
+					foreach ($workers as $worker) {
+							if ($worker['area_name'] === $nearby_area_name) {
+									$nearest_workers[] = $worker['login'];
 							}
 					}
-			}
-			foreach ($nearby as $nearby_key => $nearby_areas) {
-					foreach ($nearby_areas as $neighbor_key) {
-							if (in_array($area_key, $nearby[$neighbor_key])) {
-									foreach ($workers as $worker) {
-											if ($worker['area_name'] == $areas[$neighbor_key]) {
-													return $worker['login'];
-											}
-									}
-							}
+					if (!empty($nearest_workers)) {
+							break; // останавливаемся на первом найденном сотруднике
 					}
 			}
 	}
-	return null;
+
+	return empty($nearest_workers) ? null : $nearest_workers;
 }
-$district = 'Сулажгора';
-$login = findNearestWorker($district);
-if ($login) {
-    echo "Ближайший сотрудник для района $district: $login";
+
+// Пример использования
+$areaName = 'Перевалка';
+$result = findNearestWorker($areaName);
+if (!empty($result)) {
+    echo "Ближайший сотрудник: " . $result[0];
 } else {
-    echo "Сотрудник не найден для района $district";
+    echo "Сотрудник не найден";
 }
 ?>
