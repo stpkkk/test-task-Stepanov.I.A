@@ -57,7 +57,7 @@ export const LeaveRequestForm: React.FC = () => {
             setPhoneValid(validatePhone(value));
           }}
           className={[
-            isPhoneValid || !isTouched ? 'input' : ' input border-[tomato]',
+            isPhoneValid || !isTouched ? 'input' : 'input border-[tomato]',
           ].join(' ')}
           type="tel"
           placeholder="Номер телефона"
