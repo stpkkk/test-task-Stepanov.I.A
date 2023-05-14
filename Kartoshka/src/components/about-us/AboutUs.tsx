@@ -3,7 +3,7 @@ import { useMobile } from '../../hooks';
 import chiefGirl from '../../assets/images/chief-girl.png';
 import firstPotato from '../../assets/images/potato-first.png';
 import mutedPotato from '../../assets/images/potato-muted.png';
-import { LeaveRequestForm } from './LeaveRequestForm';
+import { RequestForm } from './RequestForm';
 
 export const AboutUs: React.FC = () => {
   const isMobile = useMobile();
@@ -35,7 +35,7 @@ export const AboutUs: React.FC = () => {
           </p>
         </div>
       </div>
-      <LeaveRequestForm />
+      <RequestForm />
       {isMobile || (
         <img
           className="absolute right-[4em] bottom-[12em]"

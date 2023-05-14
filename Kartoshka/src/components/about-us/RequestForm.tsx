@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import InputMask from 'react-input-mask';
 
-export const LeaveRequestForm: React.FC = () => {
+export const RequestForm: React.FC = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [isPhoneValid, setPhoneValid] = useState(false);
   const [isNameValid, setNameValid] = useState(false);
   const [isTouched, setTouched] = useState(false);
+
+  const nameRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<InputMask>(null);
 
   const validateName = (value: string) => {
     const isValid = value.trim().length > 0 && value.trim().length < 25;
@@ -43,7 +46,7 @@ export const LeaveRequestForm: React.FC = () => {
       </h3>
       <div className="w-full max-w-[370px] flex flex-col gap-y-[20px] mb-[65px] sm:mb-[35px]">
         <input
-          className={`input ${isTouched && !isNameValid ? 'border-[tomato]' : ''}`}
+          className={`input ${isTouched && !isNameValid && 'border-[tomato]'}`}
           type="text"
           placeholder="Имя"
           value={name}
@@ -52,6 +55,7 @@ export const LeaveRequestForm: React.FC = () => {
             setName(value);
             setNameValid(validateName(value));
           }}
+          ref={nameRef}
         />
         <InputMask
           mask="+7(999)99-999-99"
@@ -61,9 +65,10 @@ export const LeaveRequestForm: React.FC = () => {
             setPhone(value);
             setPhoneValid(validatePhone(value));
           }}
-          className={`input ${isTouched && !isPhoneValid ? 'border-[tomato]' : ''}`}
+          className={`input ${isTouched && !isPhoneValid && 'border-[tomato]'}`}
           type="tel"
           placeholder="Номер телефона"
+          ref={phoneRef}
         />
       </div>
       <button

@@ -1,2 +1,2 @@
 export { AboutUs } from './AboutUs';
-export { LeaveRequestForm } from './LeaveRequestForm';
+export { RequestForm } from './RequestForm';
