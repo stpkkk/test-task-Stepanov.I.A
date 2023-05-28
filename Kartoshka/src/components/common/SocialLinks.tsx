@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Facebook, Insta, Twitter, VK } from '../assets/icons';
+import { Facebook, Insta, Twitter, VK } from '../../assets/icons';
 
 const links = [
   { path: 'https://vk.com', image: <VK /> },

@@ -35,6 +35,7 @@ export const RequestForm: React.FC = () => {
       setPhone('');
     }
   };
+
   return (
     <form
       className="flex items-center flex-col max-w-[970px] w-full rounded-[20px] min-h-[494px] bg-gray pt-[59px] z-20 sm:min-h-[400px] sm:rounded-none sm:pt-[40px] sm:px-[35px]"

@@ -1,7 +1,5 @@
 export * from './about-us';
-export { Banner } from './Banner';
-export { Footer } from './Footer';
-export { Nav } from './Nav';
 export * from './prices';
-export { SocialLinks } from './SocialLinks';
+export * from './common';
+export { Banner } from './Banner';
 export { Video } from './Video';

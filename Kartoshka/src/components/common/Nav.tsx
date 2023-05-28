@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 
-import { Burger, Close, Logo } from '../assets/icons';
-import { useMobile } from '../hooks';
+import { Burger, Close, Logo } from '../../assets/icons';
+import { useMobile } from '../../hooks';
 import { SocialLinks } from './SocialLinks';
 
 const navLinks = [
