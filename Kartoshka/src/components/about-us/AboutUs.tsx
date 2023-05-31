@@ -1,9 +1,9 @@
 import React from 'react';
 import { useMobile } from '../../hooks';
+import { RequestForm } from './RequestForm';
 import chiefGirl from '../../assets/images/chief-girl.png';
 import firstPotato from '../../assets/images/potato-first.png';
 import mutedPotato from '../../assets/images/potato-muted.png';
-import { RequestForm } from './RequestForm';
 
 export const AboutUs: React.FC = () => {
   const isMobile = useMobile();
@@ -16,7 +16,7 @@ export const AboutUs: React.FC = () => {
       <div className="flex max-w-[752px] gap-x-[20px] sm:flex-col sm:flex_center">
         <img
           src={chiefGirl}
-          alt="chief-girl"
+          alt="chief"
           width={290}
           height={450}
           className="sm:absolute sm:right-[11em] sm:top-[3em] sm:opacity-[0.4] sm:left-0 z-20  extraSm:!top-[11em] extraSm:!left-[0]"
